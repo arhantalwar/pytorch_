@@ -41,9 +41,9 @@ for epoch in range(epochs):
 
     print(f"Weight: {model_0.weight.data} Bias: {model_0.bias.data}")
 
-    optimizer.zero_grad()
     loss.backward()
     optimizer.step()
+    optimizer.zero_grad()
 
 
 fig, ax = plt.subplots()
