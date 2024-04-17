@@ -23,7 +23,7 @@ input_size = 784
 num_classes = 10
 learning_rate = 1e-3
 batch_size = 64
-num_epochs = 1
+num_epochs = 30
 
 train_dataset = datasets.MNIST(root='dataset/',
                                train=True,
@@ -50,6 +50,7 @@ criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
 
 for epoch in range(num_epochs):
+    print(f"EPOCH {epoch+1} of {num_epochs}")
     for batch_idx, (data, targets) in enumerate(train_loader):
         data = data.to(device)
         targets = targets.to(device)
