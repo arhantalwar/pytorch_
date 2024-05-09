@@ -2,7 +2,7 @@ import torch
 from torchvision import transforms
 from PIL import Image
 
-image_path = "./cat.jpg"
+image_path = "./truck.jpg"
 image = Image.open(image_path)
 
 
